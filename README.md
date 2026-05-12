@@ -36,3 +36,13 @@
 
 ```bash
 pip install numpy pillow scikit-image tkinterdnd2
+
+❗️注意：如果没有安装 tkinterdnd2，程序仍可正常运行，但只能通过点击选择文件，无法拖放。
+
+🚀 快速开始
+
+克隆仓库或下载脚本 image_compare_gui.py。
+安装依赖。
+运行脚本：
+```bash
+python image_compare_gui.py
