@@ -80,7 +80,7 @@ pyinstaller --onefile --windowed --hidden-import=skimage.metrics --hidden-import
 ```
 生成的 dist/ImageDetailCompare.exe 可直接发送给用户使用。
 
-🤝 贡献
+## 🤝 贡献
 
 欢迎提交 Issue 或 Pull Request。如有任何问题，欢迎提出讨论。
 
