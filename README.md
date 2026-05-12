@@ -40,10 +40,49 @@ pip install numpy pillow scikit-image tkinterdnd2
 
 ❗️注意：如果没有安装 tkinterdnd2，程序仍可正常运行，但只能通过点击选择文件，无法拖放。
 
-🚀 快速开始
+## 🚀 快速开始
 
-克隆仓库或下载脚本 image_compare_gui.py。
-安装依赖。
-运行脚本：
+1.克隆仓库或下载脚本 image_compare_gui.py。
+
+2.安装依赖。
+
+3.运行脚本：
 ```bash
 python image_compare_gui.py
+```
+4.在打开的窗口中：
+
+- 左边框：拖入或选择干净图像（ground truth）
+- 中间框：拖入或选择自身模型恢复图像
+- 右边框：拖入或选择其他模型恢复图像（可多张，支持多次拖放或点击追加）
+- 调整参数（窗口大小、步长、放大倍数、角标位置等）
+- 点击 “开始生成比较图”
+- 下方三个预览框将显示：
+
+- 干净图（带红框和放大角标）
+- 自身模型图（带红框和放大角标）
+- 当前其他模型图（带红框和放大角标），可通过按钮切换
+- 点击 “保存全部标记图及局部放大”，选择目录即可保存所有结果。
+
+## 📁 输出文件说明
+
+保存时会生成两类文件，带时间戳命名。
+
+## 📦 打包成独立 EXE
+
+可以使用 PyInstaller 打包为 Windows 可执行文件，无需安装 Python 环境即可运行：
+
+可以使用 PyInstaller 打包为 Windows 可执行文件，无需安装 Python 环境即可运行：
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --hidden-import=skimage.metrics --hidden-import=tkinterdnd2 --name="ImageDetailCompare" image_compare_gui.py
+```
+生成的 dist/ImageDetailCompare.exe 可直接发送给用户使用。
+
+🤝 贡献
+
+欢迎提交 Issue 或 Pull Request。如有任何问题，欢迎提出讨论。
+
+————————————————————————————————————————————————————————
+如果觉得有用，请给个 ⭐ Star 支持一下！
