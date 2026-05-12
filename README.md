@@ -36,6 +36,7 @@
 
 ```bash
 pip install numpy pillow scikit-image tkinterdnd2
+```
 
 ❗️注意：如果没有安装 tkinterdnd2，程序仍可正常运行，但只能通过点击选择文件，无法拖放。
 
